@@ -44,4 +44,11 @@
         android:scaleType="centerCrop"
         android:src="@android:drawable/ic_menu_camera" />
 
+    <ImageView
+        android:id="@+id/iv_frame"
+        android:layout_width="100dp"
+        android:layout_height="200dp"
+        android:layout_gravity="end|bottom"
+        />
+
 </FrameLayout>
