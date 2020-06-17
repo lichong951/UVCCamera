@@ -25,6 +25,9 @@ apply plugin: 'com.android.library'
 import org.apache.tools.ant.taskdefs.condition.Os
 
 android {
+	lintOptions {
+		abortOnError false
+	}
 	compileSdkVersion versionCompiler
 	buildToolsVersion versionBuildTool
 
