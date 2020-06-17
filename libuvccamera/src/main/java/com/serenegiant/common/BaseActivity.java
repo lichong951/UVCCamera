@@ -35,6 +35,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
 
+
 import com.serenegiant.dialog.MessageDialogFragmentV4;
 import com.serenegiant.utils.BuildCheck;
 import com.serenegiant.utils.HandlerThreadHandler;
@@ -278,9 +279,9 @@ public class BaseActivity extends AppCompatActivity
 	 */
 	protected boolean checkPermissionWriteExternalStorage() {
 		if (!PermissionCheck.hasWriteExternalStorage(this)) {
-			MessageDialogFragmentV4.showDialog(this, REQUEST_PERMISSION_WRITE_EXTERNAL_STORAGE,
-				R.string.permission_title, R.string.permission_ext_storage_request,
-				new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE});
+			MessageDialogFragmentV4 messageDialogFragmentV4 = MessageDialogFragmentV4.showDialog(this, REQUEST_PERMISSION_WRITE_EXTERNAL_STORAGE,
+					R.string.permission_title, R.string.permission_ext_storage_request,
+					new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE});
 			return false;
 		}
 		return true;

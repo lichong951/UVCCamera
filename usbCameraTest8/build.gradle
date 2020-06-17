@@ -61,9 +61,14 @@ dependencies {
 	})
 	testImplementation 'junit:junit:4.12'
 
-	implementation("com.serenegiant:common:${commonLibVersion}") {
-		exclude module: 'support-v4'
-	}
+//	implementation("com.serenegiant:common:${commonLibVersion}") {
+//		exclude module: 'support-v4'
+//	}
+	compile project(path: ':common-2.12.4')
+
 	implementation project(':libuvccamera')
 	implementation project(':usbCameraCommon')
+
+	implementation 'com.android.support:appcompat-v7:27.1.1'
+
 }
